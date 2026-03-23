@@ -1,0 +1,337 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe7;
+  --surface: #fffdf8;
+  --surface-strong: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --border: #d9cdbd;
+  --accent: #b4542d;
+  --accent-dark: #8f3f20;
+  --shadow: 0 20px 60px rgba(64, 44, 26, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top, rgba(180, 84, 45, 0.18), transparent 30%),
+    linear-gradient(180deg, #efe4d4 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.page {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.hero {
+  padding-top: 1.5rem;
+}
+
+.page-header {
+  padding-top: 1.5rem;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brand,
+.nav-links a,
+.secondary-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+  max-width: 40rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.hero-panel,
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 1.25rem;
+}
+
+.panel-label {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.content-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.content-stack p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hubspot-card {
+  overflow: hidden;
+}
+
+.link-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-card:hover {
+  background: var(--accent-dark);
+}
+
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.creatio-form-shell {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #f9f4ec;
+  padding: 1.25rem;
+}
+
+.creatio-form-shell .bee-row,
+.creatio-form-shell .bee-row-content {
+  position: relative;
+}
+
+.creatio-form-shell .bee-row-1,
+.creatio-form-shell .bee-row-1 .bee-row-content {
+  background-repeat: no-repeat;
+}
+
+.creatio-form-shell .bee-row-content {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.creatio-form-shell .bee-row-content .bee-col-w12,
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 div.label:not(.inline),
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 label:not(.inline) {
+  flex-basis: 100%;
+}
+
+.creatio-form-shell .bee-form .bee-form-row .bee-field {
+  padding: 3px;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.creatio-form-shell .bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+  flex-grow: 1;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.creatio-form-shell .bee-form .bee-form-row .bee-field button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.creatio-form-shell .bee-form .bee-form-row .bee-field .bee-button-container {
+  flex-grow: 1;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 form {
+  display: inline-block;
+  width: 100%;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 div.label,
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 label {
+  display: block;
+  padding: 3px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 200%;
+  text-align: left;
+  font-weight: 400;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+  min-height: 38px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 input:not([type=checkbox]):not([type=radio]):focus {
+  outline-color: #3aaee0;
+}
+
+.creatio-form-shell .bee-row-1 .bee-col-1 .bee-block-1 button {
+  width: 100%;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #3aaee0;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 200%;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 1rem, 960px);
+    padding: 1rem 0;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .site-nav,
+  .hero-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .site-nav {
+    justify-content: start;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .creatio-form-shell .bee-row-content:not(.no_stack) {
+    display: block;
+  }
+
+  .creatio-form-shell .bee-form form {
+    width: 100% !important;
+  }
+}

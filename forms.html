@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms | Metropolis Forms</title>
+  <meta name="description" content="Contact forms powered by HubSpot and Creatio on the Metropolis Forms website.">
+  <link rel="stylesheet" href="./styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-landing-page.js"></script>
+  <script>
+    crtLanding.webhookServiceUrl = 'https://webhooks.creatio.com/webhooks/a2576586-f5c3-4e0d-9eee-37efe4ee87b6';
+    crtLanding.setParameter('LandingPageId', '211ec67a-4f5e-41c1-b2d9-96c5c4f2c386');
+  </script>
+</head>
+<body>
+  <main class="page">
+    <section class="card page-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="brand" href="./index.html">Metropolis</a>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="./about.html">About</a>
+          <a class="active" href="./forms.html">Forms</a>
+        </div>
+      </nav>
+
+      <div class="intro">
+        <p class="eyebrow">Forms</p>
+        <h1>Connect with HubSpot and Creatio</h1>
+        <p class="lede">This page keeps both integrations in one place while the rest of the site stays focused on content.</p>
+      </div>
+    </section>
+
+    <section class="card hubspot-card">
+      <div class="intro">
+        <p class="eyebrow">HubSpot</p>
+        <h2>Embedded form</h2>
+      </div>
+
+      <script src="https://js-na2.hsforms.net/forms/embed/245565447.js" defer></script>
+      <div
+        class="hs-form-frame"
+        data-region="na2"
+        data-form-id="ce24ac4d-8a14-42fe-8578-53fadb3671c5"
+        data-portal-id="245565447">
+      </div>
+    </section>
+
+    <section class="card creatio-card">
+      <div class="intro">
+        <p class="eyebrow">Creatio</p>
+        <h2>HTML form embed</h2>
+      </div>
+
+      <div class="creatio-form-shell">
+        <div class="bee-page-container">
+          <div class="bee-row bee-row-1">
+            <div class="bee-row-content">
+              <div class="bee-col bee-col-1 bee-col-w12">
+                <div class="bee-block bee-block-1 bee-form">
+                  <form accept-charset="utf-8" action="" autocomplete="true" method="POST">
+                    <div class="bee-form-row">
+                      <div class="bee-field bee-field-r0c0m0r1f1">
+                        <label for="r0c0m0r1f1">First name</label>
+                        <input id="r0c0m0r1f1" name="FirstName" type="text">
+                      </div>
+                    </div>
+                    <div class="bee-form-row">
+                      <div class="bee-field bee-field-r0c0m0r2f1">
+                        <label for="r0c0m0r2f1">Last name</label>
+                        <input id="r0c0m0r2f1" name="LastName" type="text">
+                      </div>
+                    </div>
+                    <div class="bee-form-row">
+                      <div class="bee-field bee-field-r0c0m0r3f1">
+                        <label for="r0c0m0r3f1">Email</label>
+                        <input id="r0c0m0r3f1" name="Email" type="email">
+                      </div>
+                    </div>
+                    <div class="bee-form-row">
+                      <div class="bee-field bee-field-r0c0m0r4f1">
+                        <label for="r0c0m0r4f1">Phone number</label>
+                        <input id="r0c0m0r4f1" name="PhoneNumber" type="text">
+                      </div>
+                    </div>
+                    <div class="bee-form-row">
+                      <div class="bee-field bee-field-r0c0m0r5f1">
+                        <div class="bee-button-container">
+                          <button id="r0c0m0r5f1" name="submit" type="submit" value="Submit">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bee-form-row">
+                      <input id="r0c0m0r6f1" name="EntityName" type="hidden" value="FormSubmit">
+                    </div>
+                    <div class="bee-form-row">
+                      <input id="r0c0m0r7f1" name="FormId" type="hidden" value="8bc990f5-667d-866a-c0e9-05146037d23d">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
