@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   logPageView(utmParams);
   bindClickTracking();
   bindContactForm(utmParams);
+  scheduleCreatioTrackingDebugCheck();
 });
 
 function renderSharedLayout() {
@@ -176,7 +177,9 @@ function bindContactForm(utmParams) {
     }
 
     const formData = new FormData(form);
-    const trackingUserId = window.crtUserId || "";
+    const trackingUserId = getCreatioTrackingId();
+    console.info("[Creatio] TrackingUserId before submit:", trackingUserId);
+
     // TrackingUserId is the bridge between the submitted contact and Creatio's visitor identity.
     const payload = {
       FirstName: formData.get("FirstName"),
@@ -185,10 +188,11 @@ function bindContactForm(utmParams) {
       Phone: formData.get("Phone"),
       TrackingUserId: trackingUserId,
       PageUrl: window.location.href,
+      ReferrerUrl: document.referrer,
       UTM: utmParams
     };
 
-    console.info("[Analytics] Form submission:", payload);
+    console.info("[Analytics] Form submission payload:", payload);
 
     if (typeof window.gtag === "function") {
       window.gtag("event", "form_submit_debug", payload);
@@ -224,4 +228,52 @@ function showFormStatus(element, message, isSuccess) {
   element.textContent = message;
   element.classList.toggle("is-success", isSuccess);
   element.classList.toggle("is-error", !isSuccess);
+}
+
+function getCreatioTrackingId() {
+  if (window.crtUserId) {
+    return window.crtUserId;
+  }
+
+  const dataLayer = Array.isArray(window.dataLayer) ? window.dataLayer : [];
+
+  for (let index = dataLayer.length - 1; index >= 0; index -= 1) {
+    const entry = normalizeDataLayerEntry(dataLayer[index]);
+    if (entry && entry.crt_user_id && entry.crt_session_id) {
+      return `${entry.crt_user_id}:${entry.crt_session_id}`;
+    }
+  }
+
+  return null;
+}
+
+function normalizeDataLayerEntry(entry) {
+  if (!entry) {
+    return null;
+  }
+
+  if (!Array.isArray(entry) && typeof entry === "object") {
+    return entry;
+  }
+
+  if (Array.isArray(entry)) {
+    for (let index = entry.length - 1; index >= 0; index -= 1) {
+      const nestedEntry = entry[index];
+      if (nestedEntry && typeof nestedEntry === "object" && !Array.isArray(nestedEntry)) {
+        return nestedEntry;
+      }
+    }
+  }
+
+  return null;
+}
+
+function scheduleCreatioTrackingDebugCheck() {
+  if (!document.getElementById("contact-form")) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    console.info("[Creatio] Delayed TrackingUserId check:", getCreatioTrackingId());
+  }, 2500);
 }
