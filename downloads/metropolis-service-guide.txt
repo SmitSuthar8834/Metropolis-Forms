@@ -1,0 +1,11 @@
+Metropolis Service Guide
+========================
+
+This is a downloadable dummy file for analytics testing.
+
+Use it to validate:
+- download link clicks
+- outbound and content engagement paths
+- session continuity before form submission
+
+Replace this file with a PDF or production asset later if needed.

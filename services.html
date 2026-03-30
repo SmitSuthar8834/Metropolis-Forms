@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.TAG_ID = "G-TEST1234";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST1234"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.TAG_ID);
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metropolis Analytics Demo | Services</title>
+  <meta name="description" content="Explore analytics, CRM activation, and revenue operations services with interactive cards and internal detail links.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./main.js"></script>
+</head>
+<body data-page="services" data-page-title="Services">
+  <div data-include="header"></div>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container narrow">
+        <p class="eyebrow">Services</p>
+        <h1>Service pages that support both discovery and measurable intent.</h1>
+        <p class="lede">This page gives you multiple click targets and content depths so you can test how analytics behaves when a visitor compares offers before converting.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card-grid">
+          <article id="revops" class="info-card detail-card">
+            <span class="pill">Advisory</span>
+            <h2>Revenue Operations Design</h2>
+            <p>Map lifecycle stages, lead routing rules, and reporting definitions so marketing, SDRs, and sales leaders work from the same operating model.</p>
+            <div class="action-row">
+              <a class="button button-primary" href="./contact.html" data-track="services_revops_cta">View Details</a>
+              <a class="text-link" href="./blog1.html" data-track="services_revops_blog">Read Related Article</a>
+            </div>
+          </article>
+          <article id="analytics" class="info-card detail-card">
+            <span class="pill">Measurement</span>
+            <h2>Journey Analytics Architecture</h2>
+            <p>Configure campaign tracking, event taxonomies, and reporting structures that connect top-of-funnel traffic to downstream pipeline quality.</p>
+            <div class="action-row">
+              <a class="button button-primary" href="./contact.html" data-track="services_analytics_cta">View Details</a>
+              <a class="text-link" href="./blog2.html" data-track="services_analytics_blog">Read Related Article</a>
+            </div>
+          </article>
+          <article id="activation" class="info-card detail-card">
+            <span class="pill">Activation</span>
+            <h2>Creatio CRM Activation</h2>
+            <p>Bring web behavior into Creatio so form submissions carry context, visitor identity becomes more actionable, and segmentation improves over time.</p>
+            <div class="action-row">
+              <a class="button button-primary" href="./contact.html" data-track="services_activation_cta">View Details</a>
+              <a class="text-link" href="./about.html" data-track="services_activation_about">Meet the Team</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface-section">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">Comparison Notes</p>
+          <h2>Give users reasons to keep exploring</h2>
+          <p>Visitors often compare solutions before contacting your team. Rich internal links and detail sections create more realistic navigation patterns for analytics testing.</p>
+          <a class="button button-secondary" href="./blog.html" data-track="services_blog_hub">Browse Insights</a>
+        </div>
+        <div class="scroll-panel" aria-label="Service comparison details">
+          <h3>What clients usually evaluate</h3>
+          <p>Implementation speed and ownership boundaries between marketing ops and revenue ops.</p>
+          <p>How web forms map to CRM fields and whether campaign details are retained.</p>
+          <p>Whether anonymous traffic can later be linked to known contacts after conversion.</p>
+          <p>How well analytics dashboards reflect true pipeline progression rather than vanity metrics.</p>
+          <p>What events should be captured by default versus defined later for bespoke workflows.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>

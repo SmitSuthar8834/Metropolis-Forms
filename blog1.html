@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.TAG_ID = "G-TEST1234";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST1234"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.TAG_ID);
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metropolis Analytics Demo | Blog Article 1</title>
+  <meta name="description" content="Article on structuring a B2B site for better attribution and cleaner analytics reporting.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./main.js"></script>
+</head>
+<body data-page="blog" data-page-title="Blog Article 1">
+  <div data-include="header"></div>
+
+  <main>
+    <article class="section article-layout">
+      <div class="container article-container">
+        <p class="eyebrow">Article 1</p>
+        <h1>How to structure a B2B site for cleaner attribution</h1>
+        <p class="article-meta">8 minute read</p>
+        <p class="lede">Attribution often breaks because websites treat campaign data like a landing-page concern instead of a full-session concern. Internal links should preserve context wherever reasonable.</p>
+        <div class="article-body">
+          <p>When a paid campaign visitor lands on your homepage, the initial source values are present. But if your site drops those parameters the moment a user clicks deeper into your content, downstream forms lose critical attribution context. Persisting UTM values during the session is a lightweight fix with outsized reporting benefits.</p>
+          <p>Strong analytics design also depends on intentional page architecture. A multi-page website with blog content, services pages, and clear conversion paths mirrors a real buying journey much better than a single isolated landing page.</p>
+          <p>That is especially useful when validating GA4 and Creatio together. You want to see not only page views but also how intent accumulates across content depth, outbound research clicks, downloads, and eventual form submissions.</p>
+          <p>Reusable page components matter too. Shared navigation creates predictable behavior across pages while still giving visitors many meaningful choices. That helps analysts compare engagement patterns from one section to another without implementation drift.</p>
+          <p>Finally, logging key interactions to the console during QA makes implementation easier to trust. You can verify what happened immediately before you open analytics dashboards or inspect network calls.</p>
+        </div>
+        <div class="action-row">
+          <a class="button button-primary" href="./contact.html" data-track="blog1_contact_cta">Discuss Your Setup</a>
+          <a class="button button-secondary" href="./blog2.html" data-track="blog1_next_article">Read Next Article</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>

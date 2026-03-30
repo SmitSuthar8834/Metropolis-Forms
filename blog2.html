@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.TAG_ID = "G-TEST1234";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST1234"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.TAG_ID);
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metropolis Analytics Demo | Blog Article 2</title>
+  <meta name="description" content="Article on CRM-linked form submissions and how tracking identifiers improve lead intelligence.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./main.js"></script>
+</head>
+<body data-page="blog" data-page-title="Blog Article 2">
+  <div data-include="header"></div>
+
+  <main>
+    <article class="section article-layout">
+      <div class="container article-container">
+        <p class="eyebrow">Article 2</p>
+        <h1>Why CRM-linked form submissions matter more than raw lead counts</h1>
+        <p class="article-meta">7 minute read</p>
+        <p class="lede">A form fill is only the start of the story. The real value appears when that submission carries source data, behavior context, and a stable identifier that your CRM can act on.</p>
+        <div class="article-body">
+          <p>Many teams celebrate lead volume without checking whether those records are usable. If your website only sends names and emails, your sales team receives contacts with little surrounding context. That slows follow-up and weakens attribution.</p>
+          <p>Adding a tracking identifier like <code>window.crtUserId</code> creates a bridge between anonymous browsing and known-contact workflows. Once a form is submitted, that identifier helps your systems connect prior interactions with the person who converted.</p>
+          <p>That connection becomes especially powerful when paired with campaign parameters and page-level behavior. Suddenly, reporting can answer better questions: which campaigns drive engaged visitors, which service pages influence conversions, and which content paths correlate with quality pipeline.</p>
+          <p>A solid testing site should expose all of these behaviors. That is why this demo includes article pages, download links, service detail buttons, and a contact flow that posts a payload with both form fields and tracking metadata.</p>
+          <p>When the plumbing is right, your CRM stops being a graveyard of names and becomes a system of record for customer intent.</p>
+        </div>
+        <div class="action-row">
+          <a class="button button-primary" href="./contact.html" data-track="blog2_contact_cta">Request a Consultation</a>
+          <a class="button button-secondary" href="./blog1.html" data-track="blog2_previous_article">Back to Article 1</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>

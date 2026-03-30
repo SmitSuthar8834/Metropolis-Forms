@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>window.TAG_ID = "G-TEST1234";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST1234"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.TAG_ID);
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Metropolis Forms</title>
-  <meta name="description" content="Learn about Metropolis Forms and its approach to simple lead generation websites.">
+  <title>Metropolis Analytics Demo | About</title>
+  <meta name="description" content="Learn about the Metropolis team, delivery approach, and analytics-first implementation philosophy.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
-<!-- Google tag (gtag.js) --><script> window.TAG_ID = 'G-Q14VSZPXT2'; </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q14VSZPXT2"></script>
-<script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
-<script src="https://webtracking-v01.creatio.com/JS/crt-gtag.js"></script>
+  <script defer src="./main.js"></script>
 </head>
-<body>
-  <main class="page">
-    <section class="card page-header">
-      <nav class="site-nav" aria-label="Primary">
-        <a class="brand" href="./index.html">Metropolis</a>
-        <div class="nav-links">
-          <a href="./index.html">Home</a>
-          <a href="./products.html">Products</a>
-          <a class="active" href="./about.html">About</a>
-          <a href="./forms.html">Forms</a>
-        </div>
-      </nav>
+<body data-page="about" data-page-title="About">
+  <div data-include="header"></div>
 
-      <div class="intro">
-        <p class="eyebrow">About</p>
-        <h1>Built to keep lead collection practical</h1>
-        <p class="lede">Metropolis is a lightweight demo brand for teams that want simple product pages, clear messaging, and CRM-connected forms without a heavy frontend build.</p>
+  <main>
+    <section class="page-hero section">
+      <div class="container narrow">
+        <p class="eyebrow">About Metropolis</p>
+        <h1>We design customer journeys that marketing and sales teams can actually measure.</h1>
+        <p class="lede">This demo brand represents a consulting studio focused on revenue operations, CRM strategy, and modern reporting. The content is realistic enough to simulate genuine visitor behavior during analytics validation.</p>
       </div>
     </section>
 
-    <section class="card">
-      <div class="content-stack">
-        <p>We focus on the basics that matter: pages that load quickly, forms that submit reliably, and analytics that are easy to configure. This project keeps the implementation static and straightforward so it is easy to host and extend.</p>
-        <p>The current version includes a dedicated forms page with both HubSpot and Creatio integrations, plus a shared Google Analytics snippet across the site.</p>
+    <section class="section">
+      <div class="container two-column">
+        <article class="info-card tall-card">
+          <h2>Our Mission</h2>
+          <p>Metropolis exists to close the gap between beautiful digital experiences and reliable business data. Every web interaction should tell a story your team can act on.</p>
+          <p>That means clear user journeys, thoughtful conversion points, and instrumentation that survives handoff from design to deployment.</p>
+          <a class="button button-primary" href="./contact.html" data-track="about_contact">Talk to an Advisor</a>
+        </article>
+        <article class="info-card tall-card">
+          <h2>How We Work</h2>
+          <p>We blend strategy, implementation, and reporting. Teams use our frameworks to launch faster, then layer in attribution, automation, and CRM enrichment without rebuilding everything later.</p>
+          <p>Use this page to verify engagement on mid-funnel content and observe how internal links carry UTM parameters from acquisition into evaluation.</p>
+          <a class="button button-secondary" href="./services.html" data-track="about_services">See Service Model</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section surface-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Milestones</p>
+          <h2>Scrollable team timeline</h2>
+        </div>
+        <div class="scroll-panel horizontal-panel" aria-label="Company timeline">
+          <div class="timeline-card">
+            <h3>2020</h3>
+            <p>Started as a boutique RevOps consultancy for B2B growth teams needing cleaner lead intelligence.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>2022</h3>
+            <p>Expanded into marketing analytics, attribution frameworks, and CRM event design.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>2024</h3>
+            <p>Added website instrumentation packages for GA4 and Creatio contact stitching.</p>
+          </div>
+          <div class="timeline-card">
+            <h3>Today</h3>
+            <p>Helps teams launch conversion-ready sites with measurement built in from day one.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <div data-include="footer"></div>
 </body>
 </html>

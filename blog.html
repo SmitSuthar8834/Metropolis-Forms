@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.TAG_ID = "G-TEST1234";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST1234"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.TAG_ID);
+  </script>
+  <script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
+  <script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metropolis Analytics Demo | Blog</title>
+  <meta name="description" content="Read practical articles on GA4 tracking, CRM stitching, and conversion-focused website journeys.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./main.js"></script>
+</head>
+<body data-page="blog" data-page-title="Blog">
+  <div data-include="header"></div>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container narrow">
+        <p class="eyebrow">Insights</p>
+        <h1>Blog content for deeper page tracking and internal navigation.</h1>
+        <p class="lede">The article hub adds a realistic research step between initial interest and form conversion. It is ideal for validating page depth, related-post clicks, and cross-page movement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-list">
+          <article class="info-card">
+            <p class="article-meta">Featured Article</p>
+            <h2>How to structure a B2B site for cleaner attribution</h2>
+            <p>Learn how traffic source capture, persistent UTMs, and intentional internal linking improve analytics quality without adding complexity for visitors.</p>
+            <a class="button button-primary" href="./blog1.html" data-track="blog_open_article_1">Read Article</a>
+          </article>
+          <article class="info-card">
+            <p class="article-meta">Popular Read</p>
+            <h2>Why CRM-linked form submissions matter more than raw lead counts</h2>
+            <p>See how contact enrichment, tracking identifiers, and event design help teams connect campaigns to pipeline impact.</p>
+            <a class="button button-primary" href="./blog2.html" data-track="blog_open_article_2">Read Article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>
